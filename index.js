@@ -2,8 +2,9 @@
 
 const line = require('@line/bot-sdk');
 const express = require('express');
-const bodyParser = require('body-parser')
-const replayer = require('./src/replayer')
+const bodyParser = require('body-parser');
+const replayer = require('./src/replayer');
+const logger = require('heroku-logger');
 
 // create LINE SDK config from env variables
 const config = {
@@ -36,6 +37,7 @@ app.post('/webhook', jsonParser, (req, res) => {
 
 // event handler
 function handleEvent(event) {
+  logger.info('Event', event);
   if (event.type !== 'join' && (event.type !== 'message' || event.message.type !== 'text')) {
     // ignore non-text-message event
     return Promise.resolve(null);
