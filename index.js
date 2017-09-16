@@ -3,6 +3,7 @@
 const line = require('@line/bot-sdk');
 const express = require('express');
 const bodyParser = require('body-parser')
+const replayer = require('./src/replayer')
 
 // create LINE SDK config from env variables
 const config = {
@@ -18,8 +19,8 @@ const client = new line.Client(config);
 const app = express();
 const jsonParser = bodyParser.json()
 
-// register a webhook handler with middleware
-// about the middleware, please refer to doc
+// this webhook withou auth
+// need to investigae why auth in line middleware not passed
 app.post('/webhook', jsonParser, (req, res) => {
   Promise
     .all(req.body.events.map(handleEvent))
@@ -41,10 +42,10 @@ function handleEvent(event) {
   }
 
   // create a echoing text message
-  const echo = { type: 'text', text: event.message.text };
+  const replayText = { type: 'text', text: replayer.replay(event.message.text) };
 
   // use reply API
-  return client.replyMessage(event.replyToken, echo);
+  return client.replyMessage(event.replyToken, replayText);
 }
 
 // listen on port

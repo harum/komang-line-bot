@@ -1,0 +1,32 @@
+{
+  "question": {
+    "what": [
+      "pengen tau, atau pengen tau banget?",
+      "orahin sing nah?",
+      "hmmm, males cang nyawab yan ci ne metakon",
+      "keto gen metakon, cups...",
+      "Siiing, sing mungkin",
+      "Cang sih NO.",
+      "Cang sih YES.",
+      "YA, (mode kerang ajaib)",
+      "Nggak (mode kerang ajaib)",
+      "YAAAAAA, (mode kerang ajaib)",
+      "NGGAAAKKKK (mode kerang ajaib)",
+      "BISA JADIIII",
+      "Sube pasti to bro",
+      "Takon langsung nak ne bro"
+    ],
+    "when": [
+      "Biar waktu yang menjawab",
+      "Pidan kaden",
+      "Buin pidan je ci nganten, kayange to be"
+    ]
+  },
+  "other": [
+    "Ape orang ci?",
+    "Uyut gen!",
+    "Cang sing ngerti ruu...",
+    "Ape?",
+    "Kenapa gek?"
+  ]
+}
