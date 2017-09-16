@@ -1,5 +1,6 @@
 'use strict';
 
+const logger = require('heroku-logger')
 const line = require('@line/bot-sdk');
 const express = require('express');
 
@@ -19,6 +20,10 @@ const app = express();
 // register a webhook handler with middleware
 // about the middleware, please refer to doc
 app.post('/webhook', line.middleware(config), (req, res) => {
+  logger.info('channelAccessToken', { value: process.env.CHANNEL_ACCESS_TOKEN });
+  logger.info('channelSecret', { value: process.env.CHANNEL_SECRET });
+  logger.info('req', { value: req.body.events });
+
   Promise
     .all(req.body.events.map(handleEvent))
     .then((result) => res.json(result));
