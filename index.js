@@ -36,13 +36,17 @@ app.post('/webhook', jsonParser, (req, res) => {
 
 // event handler
 function handleEvent(event) {
-  if (event.type !== 'message' || event.message.type !== 'text') {
+  if (event.type !== 'join' && (event.type !== 'message' || event.message.type !== 'text')) {
     // ignore non-text-message event
     return Promise.resolve(null);
   }
 
-  // create a echoing text message
-  const replayText = { type: 'text', text: replayer.replay(event.message.text) };
+  let replayText = {};
+  if (event.type === 'join') {
+    replayText = { type: 'join' };
+  } else {
+    replayText = { type: 'text', text: replayer.replay(event.message.text) };
+  }
 
   // use reply API
   return client.replyMessage(event.replyToken, replayText);
