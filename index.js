@@ -23,6 +23,7 @@ const jsonParser = bodyParser.json()
 // this webhook withou auth
 // need to investigae why auth in line middleware not passed
 app.post('/webhook', jsonParser, (req, res) => {
+  logger.info('Events', req.body.events);
   Promise
     .all(req.body.events.map(handleEvent))
     .then((result) => res.json(result))
