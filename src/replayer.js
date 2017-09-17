@@ -15,7 +15,7 @@ module.exports.replay = message => {
   }
 
   let replayTexts = [];
-  if (contains(message, ['apa', 'apakah', 'akankah', 'bisakah'])) {
+  if (contains(message, ['apa', 'apakah', 'akankah', 'bisakah', '?'])) {
     replayTexts = answers.question.what;
   } else if (contains(message, ['kapan', 'kapankah'])) {
     replayTexts = answers.question.when;
