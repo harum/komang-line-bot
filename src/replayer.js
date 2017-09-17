@@ -20,7 +20,13 @@ module.exports.replay = message => {
   } else if (contains(message, ['belog', 'blog', 'lengeh', 'bodoh'])) {
     replayTexts = answers.stupid;
   } else if (contains(message, ['apa', 'apakah', 'akankah', 'bisakah'])) {
-    replayTexts = answers.question.what;
+    if (Math.floor(Math.random() > 0.5) {
+      replayTexts = answers.question.what;
+    } else {
+      replayTexts = answers.question.random;
+    }
+  } else if (contains(message, ['kick', 'pesu', 'megedi'])) {
+    replayTexts = answers.question.kick;
   } else if (contains(message, ['?'])) {
     replayTexts = answers.question.random;
   } else {
