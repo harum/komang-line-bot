@@ -10,7 +10,7 @@ const contains = (message, keys) => {
 
 module.exports.replay = message => {
   lowerMessage = message.toLowerCase();
-  if (!lowerMessage.match(/^mang/)) {
+  if (!lowerMessage.match(/mang/)) {
     return null;
   }
 
