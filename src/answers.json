@@ -1,10 +1,16 @@
 {
   "question": {
-    "what": [
+    "random": [
       "pengen tau, atau pengen tau banget?",
       "orahin sing nah?",
       "hmmm, males cang nyawab yan ci ne metakon",
       "keto gen metakon, cups...",
+      "De icang takonine keto",
+      "Sing jawab jelek asane, terpaksa kal jawab. Jawab ya gen, pang demen atine",
+      "Sing juari icang nyawab dini, nyanan PMan gen nah :*",
+      "Mare ibi orahin jawabane, sube engsap. Kal metakon jani buin?"
+    ],
+    "what": [
       "Siiing, sing mungkin",
       "Cang sih NO.",
       "Cang sih YES.",
@@ -14,16 +20,18 @@
       "YAAAAAA, sudah pasti itu...",
       "NGGAAAKKKK",
       "BISA JADIIII",
-      "Sube pasti to bro",
-      "Takon langsung nak ne bro",
-      "Sing jawab jelek asane, terpaksa kal jawab. Jawab YA gen, pang demen atine",
-      "Sing juari icang nyawab dini, nyanan PMan gen nah :*",
-      "Mare ibi kal orahin jawabane, sube engsap. Kal metakon jani buin?"
+      "Sube pasti to bro"
     ],
     "when": [
       "Biar waktu yang menjawab",
       "Pidan kaden",
       "Buin pidan je ci nganten, kayange to be"
+    ],
+    "kick": [
+      "Nyen bani nge-kick cang",
+      "Pesuang sing engken, de gen kangen nyanan",
+      "Main kick gen, sing gentle ajan",
+      "Yan cang sing nyak me-kick engken?"
     ]
   },
   "other": [
@@ -31,7 +39,9 @@
     "Uyut gen!",
     "Cang sing ngerti ruu...",
     "Ape?",
-    "Kenapa gek?",
+    "Engken?",
+    "Engken? Ulang coba ketik",
+    "Nden malu, nyanan kal jawab, nu telpone jak tunang rage",
     "Kangguang icang nu melajah"
   ],
   "stupid": [

@@ -19,8 +19,10 @@ module.exports.replay = message => {
     replayTexts = answers.question.when;
   } else if (contains(message, ['belog', 'blog', 'lengeh', 'bodoh'])) {
     replayTexts = answers.stupid;
-  } else if (contains(message, ['apa', 'apakah', 'akankah', 'bisakah', '?'])) {
+  } else if (contains(message, ['apa', 'apakah', 'akankah', 'bisakah'])) {
     replayTexts = answers.question.what;
+  } else if (contains(message, ['?'])) {
+    replayTexts = answers.question.random;
   } else {
     replayTexts = answers.other;
   }
